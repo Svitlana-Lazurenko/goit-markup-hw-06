@@ -58,7 +58,7 @@
       </section>
       <section class="pre-about">
         <div class="container">
-          <h2 class="hidden-title">Наші принципи</h2>
+          <h2 class="visually-hidden">Наші принципи</h2>
           <ul class="list">
             <li>
               <div class="pre-about-img">
@@ -479,33 +479,60 @@
             </li>
           </ul>
         </div>
+        <form class="ft-form">
+          <label
+            ><span class="ft-label">Підпишіться на розсилку</span>
+            <input type="email" name="email" placeholder="E-mail" />
+          </label>
+          <button type="submit">
+            <span class="ft-btn">Підписатися</span>
+            <svg width="24" height="24"><use href="./images/icons.svg#icon-send"></use></svg>
+          </button>
+        </form>
       </div>
-      <form>
-        <label
-          >Підпишіться на розсилку
-          <input type="email" name="email" placeholder="E-mail" />
-        </label>
-        <button type="submit">
-          Підписатися
-          <svg width="24" height="24"><use href="./images/icons.svg#icon-send"></use></svg>
-        </button>
-      </form>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>
           <svg width="18" height="18"><use href="./images/icons.svg#icon-close"></use></svg>
         </button>
-        <form>
-          <p>Залиште свої дані, ми вам передзвонимо</p>
-          <label for="">Ім'я<input type="text" /></label>
-          <label for="">Телефон<input type="tel" /></label>
-          <label for="">Пошта<input type="email" /></label>
-          <label>Коментар<textarea placeholder="Введіть текст"></textarea></label>
-          <input type="checkbox" /><label
-            >Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></label
-          >
-          <button type="submit">Відправити</button>
+        <form class="modal-form">
+          <p class="modal-call">Залиште свої дані, ми вам передзвонимо</p>
+          <label for="modal-name" class="modal-label">Ім'я</label>
+          <div class="modal-input">
+            <input type="text" id="modal-name" name="modal-name" class="modal-name" />
+            <svg width="18" height="18" class="person-svg">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+          </div>
+          <label for="modal-tel" class="modal-label">Телефон</label>
+          <div class="modal-input">
+            <input type="tel" id="modal-tel" name="modal-tel" class="modal-tel" />
+            <svg width="18" height="18" class="tel-svg">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <label for="modal-email" class="modal-label">Пошта</label>
+          <div class="modal-input">
+            <input type="email" id="modal-email" name="modal-email" class="modal-email" />
+            <svg width="18" height="18" class="email-svg">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </div>
+          <label for="modal-comment" class="modal-label">Коментар</label
+          ><textarea id="modal-comment" name="modal-comment" placeholder="Введіть текст"></textarea>
+          <div class="modal-check">
+            <input
+              type="checkbox"
+              id="modal-mailing-contract"
+              name="modal-mailing-contract"
+              class="modal-checkbox visually-hidden"
+            /><label for="modal-mailing-contract" class="modal-check-label">
+              <pre>Погоджуюся з розсилкою та приймаю <a href="" target="_blank" rel="noopener noreferrer nofollow">Умови договору</a
+              ></pre>
+            </label>
+          </div>
+          <button type="submit" class="modal-btn">Відправити</button>
         </form>
       </div>
     </div>

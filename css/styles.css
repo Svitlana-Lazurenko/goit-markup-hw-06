@@ -133,7 +133,6 @@ body {
 
 .header {
   background-color: var(--primary-bg-color);
-
   border-bottom: 1px solid #ececec;
 }
 
@@ -168,6 +167,7 @@ body {
 
 .nav-link {
   display: block;
+
   padding: 32px 0px;
 
   font-weight: 500;
@@ -197,11 +197,14 @@ body {
 .current::after {
   content: '';
   display: block;
+  position: absolute;
+
+  bottom: 0;
+
   width: 100%;
   height: 4px;
+
   background-color: var(--accent-logo-color);
-  position: absolute;
-  bottom: 0;
 }
 
 .nav-list {
@@ -238,6 +241,7 @@ body {
 .hero-overlay {
   max-width: 1600px;
   height: 600px;
+
   background-image: linear-gradient(to right, #2f303a66, #2f303a66), url('../images/hero.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -297,20 +301,20 @@ main .list {
 
 .pre-about {
   background-color: var(--primary-bg-color);
-
   padding: 95px 0;
 }
 
 .pre-about-img {
-  width: 270px;
-  height: 120px;
-  background: var(--second-bg-color);
-  border-radius: 4px;
-
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
   margin-bottom: 30px;
+
+  background-color: var(--second-bg-color);
 }
 
 .pre-about-title {
@@ -334,7 +338,6 @@ main .list {
 
 .about {
   background-color: var(--primary-bg-color);
-
   padding-bottom: 95px;
 }
 
@@ -365,7 +368,6 @@ main .list {
 
 .comand {
   padding: 95px 0;
-
   background-color: var(--second-bg-color);
 }
 
@@ -381,7 +383,6 @@ main .list {
 
 .comand-card {
   background: var(--primary-bg-color);
-
   padding: 30px;
 }
 
@@ -396,7 +397,6 @@ main .list {
 }
 
 .comand-desk {
-  font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
@@ -415,7 +415,6 @@ main .list {
 
 .clients {
   background-color: var(--primary-bg-color);
-
   padding: 95px 0;
 }
 
@@ -553,10 +552,12 @@ main .list {
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
 
   background-color: rgba(33, 150, 243, 0.9);
+
   transform: translateY(100%);
   transition-property: transform;
   transition-duration: 250ms;
@@ -569,6 +570,7 @@ main .list {
 
 .overlay p {
   padding: 63px 24px;
+
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
@@ -578,6 +580,7 @@ main .list {
 
 .work-list .work-card {
   padding: 20px;
+
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
@@ -592,7 +595,6 @@ main .list {
 }
 
 .work-desk {
-  font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
 
@@ -603,22 +605,21 @@ main .list {
 
 footer {
   background-color: var(--ft-color);
-
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
 }
 
 .footer > .container,
+.ft-left,
 .footer .soc-list {
   display: flex;
 }
 
-.container > div:nth-child(1) {
-  margin-right: 70px;
+.footer > .container {
+  justify-content: space-between;
 }
 
-.container > div:nth-child(2) {
-  margin-right: 90px;
+.ft-left > div:nth-child(1) {
+  margin-right: 70px;
 }
 
 .ft-logo-link {
@@ -627,7 +628,6 @@ footer {
 
 .address-list {
   font-style: inherit;
-
   margin-top: 30px;
 }
 
@@ -682,6 +682,8 @@ footer {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* ---------Footer form---------- */
+
 .ft-form {
   display: flex;
   flex-direction: row;
@@ -690,10 +692,11 @@ footer {
 .ft-form > label {
   display: flex;
   flex-direction: column;
+
   margin-top: 12px;
 }
 
-.ft-label {
+.ft-call {
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -708,11 +711,13 @@ footer {
 .ft-form input {
   margin-right: 12px;
   padding-left: 15px;
+
   width: 360px;
   height: 50px;
+
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 }
 
@@ -720,23 +725,25 @@ footer {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
+
   color: var(--tertiary-text-color);
 }
 
 .ft-form > button {
   display: flex;
   align-items: center;
+
   width: 200px;
   height: 50px;
 
   margin-top: 47px;
 
-  background: var(--accent-logo-color);
+  background-color: var(--accent-logo-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
-.ft-btn {
+.ft-btn-text {
   margin-left: 28px;
   margin-right: 10px;
 
@@ -753,8 +760,10 @@ footer {
 .backdrop {
   width: 100%;
   height: 100%;
+
   position: fixed;
   top: 0;
+
   background-color: rgba(0, 0, 0, 0.2);
 
   transition-property: opacity, visibility;
@@ -765,11 +774,13 @@ footer {
 .modal {
   width: 530px;
   min-height: 580px;
+
+  padding: 40px;
+
   background-color: var(--primary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 40px;
 
   position: absolute;
   top: 50%;
@@ -792,8 +803,10 @@ footer {
 
   width: 30px;
   height: 30px;
+
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+
   background-color: var(--primary-bg-color);
 
   display: flex;
@@ -846,6 +859,7 @@ footer {
 .modal-email {
   width: 100%;
   height: 40px;
+
   padding-left: 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -860,6 +874,7 @@ footer {
   position: absolute;
   top: 50%;
   left: 12px;
+
   transform: translateY(-50%);
 
   transition-property: fill;
@@ -869,7 +884,9 @@ footer {
 
 .modal textarea {
   resize: none;
+
   height: 120px;
+
   margin-bottom: 25px;
   padding: 12px 16px;
 
@@ -898,14 +915,39 @@ footer {
   fill: var(--accent-logo-color);
 }
 
-.modal-check {
+.modal-check-label {
+  display: flex;
+  align-items: center;
+
   margin-left: 12px;
   margin-bottom: 30px;
 }
 
-.modal-check-label {
-  display: flex;
-  align-items: center;
+.custom-checkbox {
+  width: 15px;
+  height: 15px;
+
+  margin-right: 8px;
+
+  display: inline-block;
+
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+}
+
+.modal-checkbox:checked + .custom-checkbox {
+  background-color: var(--accent-logo-color);
+  border-color: var(--accent-logo-color);
+
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  background-origin: border-box;
+}
+
+.modal-checkbox:focus + .custom-checkbox {
+  outline: 2px solid #000000;
 }
 
 .modal-check-label pre {
@@ -921,29 +963,13 @@ footer {
   color: var(--accent-logo-color);
 }
 
-.modal-check-label::before {
-  content: '';
-  width: 15px;
-  height: 15px;
-  margin-right: 8px;
-  display: inline-block;
-  border: 2px solid var(--primary-text-color);
-}
-
-.modal-checkbox:checked + .modal-check-label::before {
-  background-color: var(--accent-logo-color);
-  border-color: var(--accent-logo-color);
-  background-image: url(../images/check.svg);
-  background-origin: border-box;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 .modal-btn {
   width: 200px;
   height: 50px;
+
   margin-left: 125px;
 
+  color: var(--primary-bg-color);
   background-color: var(--accent-logo-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -952,6 +978,4 @@ footer {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-
-  color: var(--primary-bg-color);
 }

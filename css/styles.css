@@ -907,6 +907,7 @@ footer {
 .modal-email:focus,
 .modal textarea:focus {
   outline: 1px solid var(--accent-logo-color);
+  border: transparent;
 }
 
 .modal-name:focus + .person-svg,
